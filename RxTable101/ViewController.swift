@@ -15,15 +15,35 @@ import RxSwift
 class ViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
-
-    let allCities = ["Seoul","Pusan","New York", "London", "Oslo", "Moscow", "Berlin", "Praga"]
-    let disposeBag = DisposeBag()
-
+    @IBOutlet weak var searchBar: UISearchBar!
     
+    let allCities = ["Seoul","Pusan","New York", "London", "Oslo", "Moscow", "Berlin", "Praga"]
+    
+    var favCities :[String] = [];
+    
+    let disposeBag = DisposeBag()
+ 
     override func viewDidLoad() {
         super.viewDidLoad()
     
         self.tableView.dataSource = self
+        
+        rxSetup()
+    }
+    
+    func rxSetup(){
+        
+        searchBar.rx.text.orEmpty
+            .subscribe(onNext: { (query) in
+                
+                self.favCities = self.allCities.filter{ $0.hasPrefix(query) }
+                
+                //도시명의 앞부분 철자가 일치하면 favCities 로 넣는다.
+                
+                self.tableView.reloadData()
+            }
+        )
+        .addDisposableTo(disposeBag)
     }
 }
 
@@ -36,12 +56,12 @@ class ViewController: UIViewController {
 extension ViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return allCities.count
+        return favCities.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
-        cell.textLabel?.text = allCities[indexPath.row]
+        cell.textLabel?.text = favCities[indexPath.row]
         
         return cell
     }

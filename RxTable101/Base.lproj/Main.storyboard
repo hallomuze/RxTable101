@@ -35,9 +35,16 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="Xje-yk-qDg">
+                                <rect key="frame" x="0.0" y="31" width="375" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Xje-yk-qDg" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="JoU-qJ-Bgg"/>
+                            <constraint firstItem="Xje-yk-qDg" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="L4W-8r-Dib"/>
+                            <constraint firstAttribute="trailing" secondItem="Xje-yk-qDg" secondAttribute="trailing" id="NCF-2G-UBp"/>
                             <constraint firstAttribute="trailing" secondItem="egV-wx-PcH" secondAttribute="trailing" constant="10" id="l1r-Np-wGu"/>
                             <constraint firstItem="egV-wx-PcH" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="m1z-iq-uNJ"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="egV-wx-PcH" secondAttribute="bottom" constant="10" id="tYx-4y-agF"/>
@@ -45,6 +52,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="searchBar" destination="Xje-yk-qDg" id="Nou-VW-qGz"/>
                         <outlet property="tableView" destination="egV-wx-PcH" id="UFf-8Z-FDA"/>
                     </connections>
                 </viewController>
