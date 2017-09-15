@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  RxTable101
 //
-//  Created by artist on 15/09/2017.
+//  Created by Eddie Kwon on 15/09/2017.
 //  Copyright © 2017 Eddie Kwon. All rights reserved.
 //
 
