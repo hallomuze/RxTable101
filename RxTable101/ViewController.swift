@@ -6,20 +6,43 @@
 //  Copyright © 2017 Eddie Kwon. All rights reserved.
 //
 
+//  STEP 1 : UITableView 기본 골격만 구성함.
+
 import UIKit
+import RxCocoa
+import RxSwift
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var tableView: UITableView!
 
+    let allCities = ["Seoul","Pusan","New York", "London", "Oslo", "Moscow", "Berlin", "Praga"]
+    let disposeBag = DisposeBag()
+
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    
+        self.tableView.dataSource = self
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
+
+
+// MARK: - UITableView 데이터소스만 확장해주면 됩니다.
+
+// delegate 설정은 불필요합니다.
+
+extension ViewController: UITableViewDataSource {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return allCities.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
+        cell.textLabel?.text = allCities[indexPath.row]
+        
+        return cell
+    }
+}

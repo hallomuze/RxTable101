@@ -12,9 +12,12 @@
 		6D2EC54D1F6BDD8A00C4A9A9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2EC54B1F6BDD8A00C4A9A9 /* Main.storyboard */; };
 		6D2EC54F1F6BDD8A00C4A9A9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6D2EC54E1F6BDD8A00C4A9A9 /* Assets.xcassets */; };
 		6D2EC5521F6BDD8A00C4A9A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6D2EC5501F6BDD8A00C4A9A9 /* LaunchScreen.storyboard */; };
+		FDB1FA3CE8508088C9F13BC1 /* Pods_RxTable101.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 40F062C82E2982A75E51F04B /* Pods_RxTable101.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		40F062C82E2982A75E51F04B /* Pods_RxTable101.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RxTable101.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		675A9516F3A16A330CBF0952 /* Pods-RxTable101.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTable101.release.xcconfig"; path = "Pods/Target Support Files/Pods-RxTable101/Pods-RxTable101.release.xcconfig"; sourceTree = "<group>"; };
 		6D2EC5441F6BDD8A00C4A9A9 /* RxTable101.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RxTable101.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6D2EC5471F6BDD8A00C4A9A9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6D2EC5491F6BDD8A00C4A9A9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +25,7 @@
 		6D2EC54E1F6BDD8A00C4A9A9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6D2EC5511F6BDD8A00C4A9A9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6D2EC5531F6BDD8A00C4A9A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8BCDC76ADFFF3738891FB521 /* Pods-RxTable101.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RxTable101.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RxTable101/Pods-RxTable101.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB1FA3CE8508088C9F13BC1 /* Pods_RxTable101.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				6D2EC5461F6BDD8A00C4A9A9 /* RxTable101 */,
 				6D2EC5451F6BDD8A00C4A9A9 /* Products */,
+				BC066E530A6FF4CF345A2218 /* Pods */,
+				D59FC31A9767704D907DA655 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = RxTable101;
 			sourceTree = "<group>";
 		};
+		BC066E530A6FF4CF345A2218 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8BCDC76ADFFF3738891FB521 /* Pods-RxTable101.debug.xcconfig */,
+				675A9516F3A16A330CBF0952 /* Pods-RxTable101.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D59FC31A9767704D907DA655 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				40F062C82E2982A75E51F04B /* Pods_RxTable101.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6D2EC5561F6BDD8A00C4A9A9 /* Build configuration list for PBXNativeTarget "RxTable101" */;
 			buildPhases = (
+				6D391C654FEF2419614B4A4D /* [CP] Check Pods Manifest.lock */,
 				6D2EC5401F6BDD8A00C4A9A9 /* Sources */,
 				6D2EC5411F6BDD8A00C4A9A9 /* Frameworks */,
 				6D2EC5421F6BDD8A00C4A9A9 /* Resources */,
+				01D403CA3AA48D014DCAA0A4 /* [CP] Embed Pods Frameworks */,
+				39303F52C195E152F93EB27B /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		01D403CA3AA48D014DCAA0A4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxTable101/Pods-RxTable101-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		39303F52C195E152F93EB27B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RxTable101/Pods-RxTable101-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6D391C654FEF2419614B4A4D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		6D2EC5401F6BDD8A00C4A9A9 /* Sources */ = {
@@ -259,10 +334,12 @@
 		};
 		6D2EC5571F6BDD8A00C4A9A9 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8BCDC76ADFFF3738891FB521 /* Pods-RxTable101.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L938T5Q7J8;
 				INFOPLIST_FILE = RxTable101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.RxTable101";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -272,10 +349,12 @@
 		};
 		6D2EC5581F6BDD8A00C4A9A9 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 675A9516F3A16A330CBF0952 /* Pods-RxTable101.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = L938T5Q7J8;
 				INFOPLIST_FILE = RxTable101/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "-.RxTable101";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -302,6 +381,7 @@
 				6D2EC5581F6BDD8A00C4A9A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
